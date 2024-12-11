@@ -40,11 +40,19 @@ body {
     background-color: #444444;
 
     display: inline-grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 70vh 30vh;
+    grid-template-columns: 75vw 25vw;
+    grid-template-rows: 15vh 70vh 15vh;
     grid-template-areas:
-    "player"
-    "bar";
+    "header header"
+    "player nav"
+    "footer footer";
+}
+
+#Header {
+    grid-area: header;
+
+    width: 100%;
+    height: 100%;
 }
 
 #Player {
@@ -60,43 +68,41 @@ body {
     height: 100%;
 }
 
-#Bar {
-    grid-area: bar;
+#Nav {
+    grid-area: nav;
+
+    width: 100%;
+    height: 100%;
 
     display: inline-grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
     grid-template-areas:
-    ". one"
-    ". two"
-    ". three"
-    ". ."
-    ". .";
+    "search"
+    "list";
 }
 
-#Hercules1997 {
-    grid-area: one;
-    cursor: pointer;
+#Nav-Search {
+    grid-area: search;
+
+    place-self: center;
+    width: 90%;
+    height: 40%;
+    padding: 4%;
+    border: 2px solid grey;
+    border-radius: 4px;
+    background-color: #444444;
 }
 
-#Hercules1997:hover {
-    color: blue;
+#Nav-List {
+    grid-area: list;
+
+    place-self: center;
 }
 
-#Elemental2023 {
-    grid-area: two;
-    cursor: pointer;
-}
+#Footer {
+    grid-area: footer;
 
-#Elemental2023:hover {
-    color:blue;
-}
-
-#MeanGirls2004 {
-    grid-area: three;
-    cursor: pointer;
-}
-
-#MeanGirls2004:hover {
-    color: blue;
+    width: 100%;
+    height: 100%;
 }
