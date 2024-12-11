@@ -37,7 +37,9 @@ p {
 
 
 body {
-    background-color: #444444;
+    background-color: #222222;
+    color: #dddddd;
+    font-size: 24px;
 
     display: inline-grid;
     grid-template-columns: 75vw 25vw;
@@ -92,6 +94,7 @@ body {
     border: 2px solid grey;
     border-radius: 4px;
     background-color: #444444;
+    color: #dddddd;
 }
 
 #Nav-List {
