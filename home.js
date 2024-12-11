@@ -28,6 +28,7 @@ function update_search_list() {
     files.forEach(file => {
         const list_item = document.createElement("li");
         list_item.textContent = file;
+        list_item.className = "Movie-Item";
         list_item.onclick = () => { switchVideo(file); };
         list.appendChild(list_item);
     });

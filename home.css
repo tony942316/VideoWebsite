@@ -100,6 +100,15 @@ body {
     place-self: center;
 }
 
+.Movie-Item {
+    cursor: pointer;
+}
+
+.Movie-Item:hover {
+    color: navy;
+    transform: scale(1.02);
+}
+
 #Footer {
     grid-area: footer;
 
