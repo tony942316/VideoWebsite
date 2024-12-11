@@ -1,0 +1,138 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+
+
+body {
+    background-color: #444444;
+
+    display: inline-grid;
+    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-rows: 15vh 70vh 15vh;
+    grid-template-areas:
+    ". . ."
+    ". center ."
+    ". . .";
+}
+
+#Card {
+    grid-area: center;
+
+    display: inline-grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 30% 20% 20% 20%;
+    grid-template-areas:
+    ". head ."
+    ". user ."
+    ". pass ."
+    ". login .";
+
+    background-color: #B0BEC5;
+    border-radius: 15px;
+}
+
+#Card-Head {
+    grid-area: head;
+
+    display: inline-grid;
+    place-items: center;
+
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#Card-Username {
+    grid-area: user;
+
+    place-self: center;
+    width: 80%;
+    height: 45%;
+}
+
+#Card-Username-Input {
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.7rem;
+    padding: 15px;
+}
+
+#Card-Password {
+    grid-area: pass;
+
+    place-self: center;
+    width: 80%;
+    height: 45%;
+}
+
+#Card-Password-Input {
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.7rem;
+    padding: 15px;
+}
+
+#Card-Login {
+    grid-area: login;
+
+    place-self: center;
+    width: 80%;
+    height: 60%;
+}
+
+#Card-Login-Button {
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    background-color: #04AA6D;
+    color: white;
+    transition-duration: 0.4s;
+    font-size: 1.7rem;
+}
+
+#Card-Login-Button:active {
+    border-style: outset;
+    background-color: #555555;
+}
+
+#Card-Login-Button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
