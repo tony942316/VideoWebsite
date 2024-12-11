@@ -14,7 +14,7 @@ function switchVideo(name) {
     let video = document.getElementById("Player-Video");
     video.innerHTML = "";
     let source = document.createElement("source");
-    source.setAttribute("src", name);
+    source.setAttribute("src", "Media/" + name);
     source.setAttribute("type", "video/webm");
 
     video.appendChild(source);
